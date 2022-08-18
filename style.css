@@ -1,0 +1,526 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&family=PT+Serif:ital@1&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.page_register {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  background: linear-gradient(135deg, #6c63ff, #1f2641);
+  background-attachment: fixed;
+}
+
+.container {
+  margin-top: 50px;
+  max-width:700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  height: fit-content;
+  animation: fadeIn 2s;
+}
+
+
+.page_register .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.page_register .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 30px;
+  background: #6c63ff;
+}
+
+.col-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.input-box {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+.user-details .input-box input, select {
+  height: 45px;
+  outline: none;
+  border-radius: 5px;
+  border: #6c63ff 1px solid;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.btn-container {
+  display:flex;
+  justify-content: center;
+}
+
+button {
+  width: 200px;
+  outline: none;
+  color: #fff;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  background: linear-gradient(135deg, #6c63ff, #1f2641);
+  transition: 0.5s;
+  padding: 10px;
+  margin-top: 40px;
+}
+
+button:hover{
+  background: linear-gradient(-135deg, #6c63ff, #1f2641);
+}
+
+header{
+  position: fixed;
+  top: 0;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 200px;
+  left: 0;
+  z-index: 1000;
+  background : rgba(0,0,0, 20%);
+}
+header .title{
+  font-size: 20px;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+header .nav-area{
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+.nav-area > li{
+  display: inline;
+}
+.nav-area > li > a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dropdown-about-me {
+  display: none;
+  height: 0px;
+  position: absolute;
+  background-color: #fff;
+  min-width: 40px;
+  z-index: 1;
+}
+
+.dropdown-about-me a{
+  color: #000;
+  background-color: #fff;
+  padding: 10px; 
+  text-decoration: none;
+  display: block;
+  transition: 0.5s;
+  
+}
+
+.dropdown-about-me a:hover{
+  background-color: #6c63ff;
+  color: #fff;
+  height: max-content;
+}
+
+.about-me:hover .dropdown-about-me{
+  display: block;
+}
+
+header .title {
+  font-size: 20px;
+}
+
+.hero {
+  height:100vh;
+  width: 100%;
+  background: linear-gradient(135deg, #6c63ff, #1f2641);
+  color: #fff;
+  padding: 250px 200px;
+  position: relative;
+}
+
+.hero .title{
+  font-size: 56px;
+  text-transform: uppercase;
+  font-weight: 900;
+  line-height: 90px;
+}
+
+.surname {
+  display: block;
+  font-size:  90px;
+}
+
+.hero .title::before {
+  content: '';
+  position: absolute;
+  height: 290px;
+  width: 70px;
+  left: -1px;
+  top: 200px;
+  background: #fff;
+}
+
+.hero .title::after {
+  content: '';
+  position: absolute;
+  height: 290px;
+  width: 721px;
+  right: -1px;
+  top: 200px;
+  background: #fff;
+  background-image: url('/hero-image.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.hero p {
+  position: absolute;
+  margin-top: 111px;
+  text-align: right;
+  max-width: 525px;
+  right: 200px;
+}
+
+.goal {
+left: 199px;
+top: 926px;
+text-transform: uppercase;
+font-size: 20px;
+font-weight: 400;
+padding: 127px 200px;
+}
+
+.goal .title {
+  font-weight: 900;
+}
+
+.goal p {
+margin-top: 43px;
+}
+
+.mygoal {
+position: absolute;
+width: 30px;
+left: -67px;
+top: 200px;
+font-weight: 1000;
+font-size: 500px;
+letter-spacing: -0.12em;
+color: rgba(108, 99, 255, 0.05);
+}
+
+.hobbies {
+padding: 127px 200px;
+width: 100%;
+height: 682px;
+left: 0px;
+top: 1160px;
+color: #fff;
+background: linear-gradient(101.65deg, #6C63FF 0%, #1F2641 98.99%);
+}
+
+.hobbies .title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+.icons {
+  display: flex;
+  justify-content: space-between;
+}
+.icon {
+  font-weight: 700;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.hobbies .icon img {
+  height: 150px;
+  margin: 50px 0 50px 8px;
+}
+
+.school {
+left: 199px;
+top: 26px;
+font-size: 20px;
+font-weight: 400;
+padding: 127px 200px;
+}
+
+.school .title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.school p {
+margin-top: 43px;
+}
+
+.photo {
+padding: 127px 200px;
+width: 100%;
+height: 682px;
+left: 0px;
+top: 1160px;
+color: #fff;
+background: linear-gradient(101.65deg, #6C63FF 0%, #1F2641 98.99%);
+}
+
+.photo .title {
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
+.pics {
+   display: flex;
+   justify-content: space-between;
+}
+
+.pic {
+  flex-direction: column;
+  align-items: center;
+}
+
+.photo .pic img {
+  margin: 50px 0 50px 15px;
+}
+
+.copyright {
+  width:100%;
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: #fff;
+  text-align: center;
+  display: block;
+}
+
+.year {
+  font-weight: 900;
+  font-size: 16px;
+  line-height: 19px;
+  color: #fff;
+}
+
+ .contact_page {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  background: linear-gradient(135deg, #6c63ff, #1f2641);
+  background-attachment: fixed;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0; margin-top: 100px;}
+  to {opacity: 1; margin-top: 50px;}
+}
+
+@keyframes fadeIn2 {
+  from {opacity: 0; margin-top: 200px;}
+  to {opacity: 1; margin-top: 150px;}
+}
+
+.contain {
+  margin-top: 50px;
+  max-width:700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  height: fit-content;
+  animation: fadeIn 2s;
+}
+
+.contact_page .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contact_page .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  height: 3px;
+  width: 30px;
+  background: #6c63ff;
+}
+
+.input-boxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.area {
+ height: 150px;
+ border: #6c63ff 1px solid;
+}
+
+.user-info .input-boxes input, select {
+  height: 45px;
+  outline: none;
+  border-radius: 5px;
+  border: #6c63ff 1px solid;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.btn-contain {
+  display:flex;
+  justify-content: center;
+}
+
+.login_page {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  background: linear-gradient(135deg, #6c63ff, #1f2641);
+  background-attachment: fixed;
+}
+.calculator_page{
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  justify-content: center;
+  background: linear-gradient(135deg, #6c63ff, #1f2641);
+  background-attachment: fixed;
+}
+
+.contains {
+  margin-top: 50px;
+  max-width:700px;
+  width: 100%;
+  background: #fff;
+  padding: 25px 30px;
+  border-radius: 5px;
+  height: fit-content;
+  animation: fadeIn 2s;
+}
+
+.calculator_page .contains{
+  max-width:350px;
+  margin-top: 150px;
+  animation: fadeIn2 2s;
+}
+
+.calculator_page .input input{
+  height: 50px;
+  padding: 20px;
+  text-align : right;
+  border: #6c63ff 1px solid;
+  border-radius : 5px;
+  font-weight : 100;
+  font-size :  40px;
+  color : #9fa6c4;
+}
+
+.calculator_page button{
+  height : 60px;
+  width : 60px;
+  background : #9fa6c4;
+  margin-top: 16px;
+  transition: 0.5s;
+}
+
+.calculator_page button:hover{
+  opacity: 0.6;
+  transform: scale(1.2);
+}
+
+.calculator_page .action:hover{
+  opacity: 1;
+}
+
+.calculator_page .action{
+  background: linear-gradient(135deg, #6c63ff, #1f2641);
+}
+
+.calculator_page .equal{
+  flex: 1;
+}
+
+.calculator_page .final-row{
+ gap: 16px;
+}
+
+.calculator_page .button-row{
+  display: flex;
+  justify-content: space-between;
+  margin: 0px;
+}
+
+.login_page .title {
+  font-size: 25px;
+  font-weight: 500;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.login_page .title::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  height: 3px;
+  width: 30px;
+  background: #6c63ff;
+}
+
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex: 1;
+}
+
+.user-information .input input, select {
+  height: 45px;
+  outline: none;
+  border-radius: 5px;
+  border: #6c63ff 1px solid;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.btn {
+  display:flex;
+  justify-content: center;
+}
